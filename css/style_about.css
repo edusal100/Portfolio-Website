@@ -1,0 +1,260 @@
+/*CSS Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+/*General Style*/
+
+body{
+    background: #6b727a;
+    color: white;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.item1 {
+    font-size: 1.5em;
+}
+
+.item1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.item1 a:hover {
+    color: yellow;
+}
+
+.item2 ul li{
+    display: inline;
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+.item2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.item2 a:hover {
+    color: yellow;
+}
+
+.item3 h1 {
+    margin-top: 1em;
+    font-size: 5em;
+    font-weight: 900;
+}
+
+.item3 h2 {
+    font-size: 3em;
+    color: yellow;
+    font-weight: 700;
+}
+
+.item5 hr{
+    border: none;
+    height: 1px;
+    color: white;
+    background-color: white;
+}
+
+.coffee {
+    width: 30px;
+    vertical-align: middle;
+    padding-left: 6px;
+}
+
+.arrow {
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 1em;
+    margin-top: -.1em;
+}
+
+.created_flex {
+    display:flex;
+}
+
+.item8 h2 {
+    margin-top: .5em;
+    font-size: 2em;
+    align-self: center;
+    padding-left: 1em;
+
+}
+
+.item8 h3 {
+    font-size: 1em;
+    font-weight: 400;
+    align-self: center;
+}
+
+.first_work{
+    width: 100%;
+}
+
+/*Grid Layout Desktop*/
+
+.container_grid {
+    display: grid;
+    padding: 10px;
+    grid-template-areas: 'header menu menu'
+                         'main main main'
+                         'footer_line footer_line footer_line'
+                         'footer footer footer';
+    grid-template-rows: .2fr 3fr auto auto;
+    grid-template-columns: 2fr 1.5fr 2fr;
+
+}
+
+.container_grid div{
+    padding: 10px;
+}
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+    justify-self: flex-end;
+}
+
+.item3 {
+    grid-area: main;
+    align-self: center;
+}
+
+
+/*Aside Flex*/
+
+.item4 {
+    grid-area: aside;
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+}
+
+.item5 {
+    grid-area: footer_line;
+    margin-top: 2em;
+}
+
+/*Footer Flex*/
+
+.item6 {
+    grid-area:footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item7 {
+    grid-area:works_column_1;
+    margin-top: 2em;
+}
+
+.item8 {
+    grid-area: works_column_2;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 2em;
+}
+
+/*Grid Layout Mobile*/
+
+@media(max-width: 650px) {
+
+.container_grid {
+    grid-template-areas: 'header'
+                         'menu'
+                         'main'
+                         'aside'
+                         'footer_line'
+                         'footer'
+                         'works_column_1'
+                         "works_column_2";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+.item2 {
+    justify-self: flex-start;
+    margin-top: -.5em;
+}
+
+.item2 ul li{
+    padding-right: 20px;
+    padding-left: 0px;
+}
+
+.first_work{
+    width: 100%;
+}
+
+.item3 h1 {
+    margin-top: 1em;
+    font-size: 4em;
+}
+
+.item3 h2 {
+    font-size: 2em;
+}
+
+.item8 h2 {
+    padding-left: 1em;
+    font-size: 1.8em;
+}
+
+.item4 {
+    margin-top: 1em;
+}
+
+/*Hiding elements for mobile*/
+
+.email {
+    display: none; 
+}
+
+.created_flex {
+    display: none;
+}
+
+}
+
+/*Grid Layout Tablet*/
+
+@media (max-width: 1024px) and (min-width: 651px ) {
+
+    .first_work{
+        width: 100%;
+    }
+
+    .item3 h1 {
+        margin-top: 1em;
+        font-size: 5em;
+    }
+
+    .item3 h2 {
+        font-size: 2.5em;
+    }
+
+    .item8 h2 {
+        font-size: 1.5em;
+    }
+    
+    .item8 h3 {
+        font-size: .8em;
+    }
+
+/*Hiding elements for tablet*/
+
+.created_flex {
+    display: none;
+}
+
+}

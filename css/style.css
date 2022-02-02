@@ -1,0 +1,292 @@
+/*CSS Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+/*General Style*/
+
+body{
+    background: white;
+    color: black;
+    font-family: 'Poppins', 'sans-serif';
+   }
+
+.item1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.item1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.item1 a:hover {
+    color: tomato;
+}
+
+.item2 ul li{
+    display: inline;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+
+.item2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.item2 a:hover {
+    color: tomato;
+}
+
+.item3 h1 {
+    margin-top: 10rem;
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+/*Gradient & Animation Title*/
+
+.name_title {
+    outline: none;
+    background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100% );
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+}
+
+.item3 h2 {
+    margin-top: -1rem;
+    font-size: 2rem;
+    color: darkgray;
+    font-weight: 700;
+}
+
+
+.item5 hr{
+    border: none;
+    height: 1px;
+    color: tomato;
+    background-color: tomato;
+}
+
+.coffee {
+    width: 30px;
+    vertical-align: middle;
+    padding-left: 6px;
+}
+
+.arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 1rem;
+    margin-top: -.1rem;
+}
+
+.created_flex {
+    display:flex;
+}
+
+.item8 h2 {
+    margin-top: .5rem;
+    font-size: 2rem;
+    align-self: center;
+    padding-left: 1rem;
+
+}
+
+.item8 h3 {
+    font-size: 1em;
+    font-weight: 400;
+    align-self: center;
+}
+
+.item7 img , .item8 img{
+    width: 100%;
+}
+
+.item8 img {
+    margin-top: 10rem;
+}
+
+/* Title Animation keyframe*/
+
+@keyframes animate {
+     100% {
+         background-position: 400%;
+     }
+}
+
+/*Grid Layout Desktop*/
+
+.container_grid {
+    display: grid;
+    padding: 20px;
+    grid-template-areas: 'header menu menu'
+                         'main main main'
+                         'aside aside aside'
+                         'footer_line footer_line footer_line'
+                         'footer footer footer'
+                         'works_column_1 works_column_1 works_column_2';
+    grid-template-rows: .2fr 3fr auto auto auto auto;
+    grid-template-columns: 2fr 1.5fr 2fr;
+
+}
+
+.container_grid div{
+    padding: 10px;
+}
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+    justify-self: flex-end;
+}
+
+.item3 {
+    grid-area: main;
+    align-self: center;
+}
+
+
+/*Aside Flex*/
+
+.item4 {
+    grid-area: aside;
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+}
+
+.item5 {
+    grid-area: footer_line;
+    margin-top: 2rem;
+}
+
+/*Footer Flex*/
+
+.item6 {
+    grid-area:footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item7 {
+    grid-area:works_column_1;
+    margin-top: 2rem;
+}
+
+.item8 {
+    grid-area: works_column_2;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 2rem;
+}
+
+/*Grid Layout Mobile*/
+
+@media(max-width: 650px) {
+
+.container_grid {
+    grid-template-areas: 'header'
+                         'menu'
+                         'main'
+                         'aside'
+                         'footer_line'
+                         'footer'
+                         'works_column_1'
+                         "works_column_2";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+.item2 {
+    justify-self: flex-start;
+    margin-top: -.5rem;
+}
+
+.item2 ul li{
+    padding-right: 20px;
+    padding-left: 0px;
+}
+
+.item7 img , .item8 img{
+    width: 100%;
+}
+
+.item8 img {
+    margin-top: 2rem;
+}
+
+.item3 h1 {
+    margin-top: 5rem;
+    font-size: 10vw;
+}
+
+.item3 h2 {
+    font-size: 2rem;
+}
+
+.item8 h2 {
+    padding-left: 1rem;
+    font-size: 1.8rem;
+}
+
+.item4 {
+    margin-top: 1rem;
+}
+
+/*Hiding elements for mobile*/
+
+.email {
+    display: none; 
+}
+
+.created_flex {
+    display: none;
+}
+
+}
+
+/*Grid Layout Tablet*/
+
+@media (max-width: 1024px) and (min-width: 651px ) {
+
+    .item7 img , .item8 img{
+        width: 100%;
+    }
+
+    .item3 h1 {
+        margin-top: 6rem;
+        
+    }
+
+    .item3 h2 {
+        font-size: 2.5rem;
+    }
+
+    .item8 h2 {
+        font-size: 1.5rem;
+    }
+    
+    .item8 h3 {
+        font-size: .8rem;
+    }
+
+/*Hiding elements for tablet*/
+
+.created_flex {
+    display: none;
+}
+
+}
