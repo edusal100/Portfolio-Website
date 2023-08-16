@@ -6,7 +6,7 @@ This is a fictional personal portfolio with a little of HTML and grid and flexbo
 
 
 ```bash
-git clone https://github.com/edusal100/.git
+git clone https://github.com/edusal100/Portfolio-Website.git
 ```
 
 Install dependencies
